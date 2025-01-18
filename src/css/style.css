@@ -1,0 +1,45 @@
+body {
+    background-color: #323236;
+}
+
+.Main-Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+}
+
+#header {
+    padding-top: 150px;
+    color: aliceblue;
+}
+
+#translate-box-area {
+    /* background-color: beige; */
+    display: grid;
+}
+
+#text-box {
+    height: 100px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+#translate-button {
+    width: 100px;
+    margin-left: 306px;
+    border-radius: 5px;
+    background-color: pink;
+}
+
+#header-period {
+    color: pink;
+}
+
+/* #text-box-translated {
+    display: none;
+}
+
+#translate-button-translated {
+    /* background-color: aqua; */
