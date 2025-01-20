@@ -12,7 +12,7 @@ body {
 
 #header {
     padding-top: 150px;
-    color: aliceblue;
+    color: rgb(45, 50, 55);
 }
 
 #translate-box-area {
@@ -28,9 +28,16 @@ body {
 
 #translate-button {
     width: 100px;
-    margin-left: 306px;
+    margin-left: 200px;
     border-radius: 5px;
+    margin-top: 3px;
     background-color: pink;
+}
+
+#clear-button {
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 3px;
 }
 
 #header-period {
