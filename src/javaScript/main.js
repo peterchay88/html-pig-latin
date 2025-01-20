@@ -1,11 +1,21 @@
 // Define html elements
-const translateBox = document.getElementById("text-box");
+const textBox = document.getElementById("text-box");
 const translateButton = document.getElementById("translate-button");
+const copyButton = document.getElementById("copy-button")
 
 function translateFunction(){ 
-    const text = translateBox.value;
+    // Make the text box read only and assign text to a variable
+    const text = textBox.value;
+    textBox.setAttribute("readonly", true)
 
-    alert(text);
+    // Hide translate button and show copy button
+    copyButton.style.display = "inline";
+    translateButton.style.display = "none";
+    
+}
+
+function clearFunction(){
+    textBox.value = "";
 }
 
 // function test(){
