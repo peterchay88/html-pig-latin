@@ -10,10 +10,22 @@ body {
 
 }
 
+/*****************************************
+Header Styles
+*****************************************/
+
 #header {
     padding-top: 150px;
     color: aliceblue;
 }
+
+#header-period {
+    color: pink;
+}
+
+/*****************************************
+Text Box Styles
+*****************************************/
 
 #translate-box-area {
     /* background-color: beige; */
@@ -26,6 +38,10 @@ body {
     border-radius: 5px;
     resize: none;
 }
+
+/*****************************************
+Button Styles
+*****************************************/
 
 #translate-button {
     width: 100px;
@@ -58,13 +74,3 @@ body {
     border-width: 0.5px;
 }
 
-#header-period {
-    color: pink;
-}
-
-/* #text-box-translated {
-    display: none;
-}
-
-#translate-button-translated {
-    /* background-color: aqua; */
