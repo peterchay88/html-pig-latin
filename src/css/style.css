@@ -74,3 +74,11 @@ Button Styles
     border-width: 0.5px;
 }
 
+/*****************************************
+Toast Menu Styles
+*****************************************/
+
+#toast-menu {
+    display: none;
+    /* TODO: Create styles for toast menu */
+}

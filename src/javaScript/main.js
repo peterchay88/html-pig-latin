@@ -29,11 +29,8 @@ function copyText(){
     pass
 }
 
-// function test(){
-//     const myButton = document.getElementById("my-btn");
-    
-
-//     myButton.style.width = "500px";
-//     myButton.style.backgroundColor = "blue";
-//     document.body.style.backgroundColor = "red";
-// }
+class Buttons {
+    constructor(elementId) {
+        this.translateButton = 
+    }
+}
