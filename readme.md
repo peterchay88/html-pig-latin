@@ -23,3 +23,8 @@ We Welcome contributions to the project! To contribute, follow these guidelines:
     git push origin my-feature-branch
     ```
 5. Create a pull request with a clear description of your changes.
+
+### TODO
+1. Finish Functionality 
+2. Adjust styling
+3. Add tabs for about, info, etc.

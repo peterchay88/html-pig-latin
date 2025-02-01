@@ -7,7 +7,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
+    margin-bottom: auto;
 
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
 }
 
 /*****************************************
@@ -81,4 +89,11 @@ Toast Menu Styles
 #toast-menu {
     display: none;
     /* TODO: Create styles for toast menu */
+}
+
+/*****************************************
+Project info styles
+*****************************************/
+#info {
+    color: aliceblue;
 }
