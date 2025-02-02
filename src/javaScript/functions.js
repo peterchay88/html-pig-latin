@@ -24,13 +24,6 @@ function clearTextArea(){
     translateButton.style.display = "inline";
 }
 
-function copyText(){
-    // Pop toast informing user that the text is copied 
-    pass
-}
+// function copyText(){
 
-class Buttons {
-    constructor(elementId) {
-        this.translateButton = 
-    }
-}
+// }
