@@ -12,7 +12,6 @@ class ButtonFunctions {
         this.translateButton = document.getElementById("translate-button");
         this.copyButton = document.getElementById("copy-button");
         this.clearButton = document.getElementById("clear-button");
-        // this.pigLatin = new PigLatin("Hello");
 
         // Attach event listeners within the constructor to ensure this context is correct
         this.translateButton.addEventListener("click", () => this.translateText());
@@ -24,10 +23,11 @@ class ButtonFunctions {
      */
     translateText(){ 
         // Make the text box read only and assign text to a variable
-        const text = this.textBox.value;
+        const textToBeTranslated = new PigLatin(this.textBox.value);
         this.textBox.setAttribute("readonly", true);
 
-        console.log(text)
+        // console.log(textToBeTranslated)
+        console.log(textToBeTranslated.translate())
     
         // Hide translate button and show copy button
         this.copyButton.style.display = "inline";

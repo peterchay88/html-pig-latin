@@ -12,14 +12,27 @@ export default class PigLatin {
 
     /**
      * This method takes in the sentence and returns an array of words.
-     * 
      * @returns {sentenceArray} - Returned array for words to be translated.
      */
     splitSentence() {
         const sentenceArray = this.sentence.split(" ");
-        for (let i = 0; i < sentenceArray.length; i++) {
-            this.translate(sentenceArray[i]);
+        return sentenceArray;
+    }
+
+    /**
+     * This method calls the splitSentence() method and passes along each word to the
+     * figureOutTranslation() method to get translated. After all words are passed
+     * it calls and returns the output of combineWords() as the translated sentence
+     * 
+     * @returns {string} Translated sentence.
+     */
+    translate(){
+        // console.log(this.splitSentence())
+        for (let i = 0; i < this.splitSentence().length; i++) {
+            this.figureOutTranslation(this.splitSentence()[i])
         }
+        // take the translated sentence array and return it as a string
+        return this.combineWords();        
     }
 
     /**
@@ -34,22 +47,20 @@ export default class PigLatin {
      * 
      * @param {string} word - Word to be translated. 
      */
-    translate(word){
+    figureOutTranslation(word) {
         if (this.vowels.includes(word[0]) === true) { // If the first letter is a vowel
-            let translatedWord = this.firstVowel(word);
+            var translatedWord = this.firstVowel(word);
         } 
 
         if (this.vowels.includes(word[0]) === false) { // if the first letter is not a vowel
             if (this.vowels.includes(word[1]) === true) { // if the second letter is a vowel
-                let translatedWord = this.singleConsonant(word);
+                var translatedWord = this.singleConsonant(word);
             } else { // if the second letter is not a vowel
-                let translatedWord = this.doubleConsonant(word);
+                var translatedWord = this.doubleConsonant(word);
             }
         }
-
+        // Append translated word to sentence
         this.translatedSentenceArray.push(translatedWord);
-        return this.combineWords();
-        
     }
 
     /**
@@ -71,7 +82,6 @@ export default class PigLatin {
     /**
      * This method takes in words that start with a consonant and a vowel and returns the
      * pig latin translation of that word.
-     * 
      * @param {string} word - Word to be translated.
      * @returns {string} Translated word.
      */
@@ -84,7 +94,6 @@ export default class PigLatin {
     /**
      * This method takes in words that start with a vowel and returns the pig latin
      * translation of that word
-     * 
      * @param {string} word - Word to be translated.
      * @returns {string} Translated word.
      */
@@ -95,7 +104,6 @@ export default class PigLatin {
     /**
      * This method takes the array defined in translatedSentence and combines it
      * into a text string
-     * 
      * @returns {string} Translated sentence
      */
     combineWords() {
@@ -103,8 +111,8 @@ export default class PigLatin {
         for (let i = 0; i < this.translatedSentenceArray.length; i++) {
             translatedSentence = translatedSentence.concat(this.translatedSentenceArray[i], " ");
         }
-
-        return translatedSentence.trim() // remove trailing spaces and return it
+        // remove trailing spaces and return it
+        return translatedSentence.trim() 
     }
 }
 
