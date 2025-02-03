@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pig Latin Translator!</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../javaScript/functions.js" defer></script>
+
 </head>
 <body>
     <!-- Main content of the page. Including header, text box, and buttons -->
@@ -20,8 +20,8 @@
 
             <div id="button-group">
                 <button id="copy-button">Copy</button>
-                <button id="translate-button" onclick="translateText()">Translate</button>
-                <button id="clear-button" onclick="clearTextArea()">Clear</button>
+                <button id="translate-button">Translate</button>
+                <button id="clear-button">Clear</button>
             </div>
 
         </div>
@@ -35,5 +35,9 @@
     </div>
     
 </body>
-<script src="../javaScript/render.js"></script>
+
+    <script src="../javaScript/render.js"></script>
+    <script src="../javaScript/functions.js" type="module"></script>
+    <!-- <script src="../javaScript/pigLatin.js"></script> -->
+
 </html>

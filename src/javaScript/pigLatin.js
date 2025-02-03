@@ -1,4 +1,4 @@
-class PigLatin {
+export default class PigLatin {
     /**
      * Creates a new Pig latin instance
      * @param {String} sentence - English sentence to be translated
@@ -107,3 +107,4 @@ class PigLatin {
         return translatedSentence.trim() // remove trailing spaces and return it
     }
 }
+
