@@ -32,7 +32,9 @@ export default class PigLatin {
             this.figureOutTranslation(this.splitSentence()[i])
         }
         // take the translated sentence array and return it as a string
-        return this.combineWords();        
+        const translatedSentence = this.combineWords();
+        this.translatedSentenceArray = []; // Resetting translation array
+        return translatedSentence;        
     }
 
     /**

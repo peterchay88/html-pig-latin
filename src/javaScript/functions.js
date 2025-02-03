@@ -1,7 +1,5 @@
 import PigLatin from './pigLatin.js';
-console.log(PigLatin)
 
-console.log("Hello world!!!!!")
 
 class ButtonFunctions {
     /**
@@ -19,15 +17,17 @@ class ButtonFunctions {
     }
 
     /**
-     * Translate method TODO add documentation
+     * When this method is called it will pass along the value in the text box
+     * to the PigLatin class to translate it. The translated text will appear in
+     * the text box .Translate button will turn into copy button
      */
     translateText(){ 
         // Make the text box read only and assign text to a variable
         const textToBeTranslated = new PigLatin(this.textBox.value);
         this.textBox.setAttribute("readonly", true);
 
-        // console.log(textToBeTranslated)
-        console.log(textToBeTranslated.translate())
+        console.log(textToBeTranslated.translate());
+        this.textBox.value = textToBeTranslated.translate();
     
         // Hide translate button and show copy button
         this.copyButton.style.display = "inline";
@@ -35,7 +35,8 @@ class ButtonFunctions {
     }
 
     /**
-     * clear method TODO add documentation
+     * Clears the value in the text area and turns the copy button back
+     * into the translate button.
      */
     clearTextArea(){
         // Reset text area 
@@ -45,9 +46,13 @@ class ButtonFunctions {
         // Hide copy button and show translate button
         this.copyButton.style.display = "none";
         this.translateButton.style.display = "inline";
-    
-        // Test change button color for debugging
-        this.clearButton.style.backgroundColor = "red";
+    }
+
+    /**
+     * Copies the text in the text area to the users clip board
+     */
+    copyText(){
+        
     }
 
 }
