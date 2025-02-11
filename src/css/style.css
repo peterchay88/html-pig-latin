@@ -1,5 +1,24 @@
 body {
+    /* background-color: #323236;d */
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row; /*Row is the default. Stacks item from left to right*/
+    height: 100vh; /* Needed to stretch body full length of the page*/ 
+}
+
+#side-menu{
     background-color: #323236;
+    flex-grow: 1;
+    /* width: 200px; */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+#settings-btn {
+    background-color: transparent;
+    border: none;
+    position: sticky;
 }
 
 .Main-Content {
@@ -7,15 +26,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    margin-bottom: auto;
-
-}
-
-#footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: auto;
+    flex-grow: 6;
+    /* margin-bottom: auto; */
 }
 
 /*****************************************
@@ -23,12 +35,16 @@ Header Styles
 *****************************************/
 
 #header {
-    padding-top: 150px;
-    color: aliceblue;
+    /* padding-top: 150px; */
+    color: #323236;
+}
+
+h1 {
+    margin-bottom: 5px;
 }
 
 #header-period {
-    color: pink;
+    color: rgb(248, 176, 188);
 }
 
 /*****************************************
@@ -41,10 +57,18 @@ Text Box Styles
 }
 
 #text-box {
+    padding-bottom: 10px;
     height: 100px;
     width: 400px;
-    border-radius: 5px;
+    border-radius: 8px;
     resize: none;
+    margin-bottom: 5px;
+}
+
+#text-box:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 /*****************************************
@@ -56,9 +80,10 @@ Button Styles
     margin-left: 200px;
     border-radius: 5px;
     margin-top: 3px;
-    background-color: pink;
+    /* background-color: pink; */
+    background-color: rgb(248, 176, 188);
     border-width: 0.5px;
-    color: #323236;
+    /* color: #323236; */
 }
 
 #copy-button {
@@ -77,8 +102,10 @@ Button Styles
     border-radius: 5px;
     margin-top: 3px;
     background-color: #323236;
-    color: pink;
-    border-color: pink;
+    /* color: rgb(248, 176, 188); */
+    color: aliceblue;
+    border-color: rgb(248, 176, 188);
+    /* border-color: white; */
     border-width: 0.5px;
 }
 
