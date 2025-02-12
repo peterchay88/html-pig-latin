@@ -2,7 +2,7 @@ body {
     /* background-color: #323236;d */
     background-color: aliceblue;
     display: flex;
-    flex-direction: row; /*Row is the default. Stacks item from left to right*/
+    flex-direction: column; /*Row is the default. Stacks item from left to right*/
     height: 100vh; /* Needed to stretch body full length of the page*/ 
     margin: 0;
 }
@@ -13,7 +13,8 @@ body {
     align-items: center;
     flex-direction: column; 
     flex-grow: 15;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
+    /* margin-right: 139px; */
 }
 
 /*****************************************
@@ -33,11 +34,22 @@ Side Nav and Settings Button Styles
 }
 
 #settings-btn-menu-closed {
+    display: flex;
     background-color: transparent;
-    /* align-items: center;
-    justify-content: center; */
-    height: 100px;
+    align-items: center;
     font-size: 30px;
+    position: fixed;
+    /* left: 0px; */
+    z-index: 1000;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+#settings-btn-menu-closed:hover svg{
+    fill: rgb(248, 176, 188);
 }
 
 #settings-btn-menu-closed > span {
