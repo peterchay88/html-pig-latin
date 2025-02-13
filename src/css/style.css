@@ -46,7 +46,9 @@ Side Nav and Settings Button Styles
 #settings-btn-menu-open {
     background-color: transparent;
     border: none;
-    z-index: 1000;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
 }
 
 #settings-btn-menu-closed {
@@ -58,6 +60,7 @@ Side Nav and Settings Button Styles
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 5px;
     background-color: transparent;
     border: none;
     transition: 0.5s ease;
