@@ -31,7 +31,7 @@ body {
 Side Nav and Settings Button Styles
 *****************************************/
 
-#side-menu{
+#settings-menu{
     background-color: #323236;
     flex-grow: 1; /* 1/12 the width of main content*/
     position: fixed;
@@ -60,6 +60,7 @@ Side Nav and Settings Button Styles
     padding-right: 10px;
     background-color: transparent;
     border: none;
+    transition: 0.5s ease;
     /* display: none; */
 }
 
