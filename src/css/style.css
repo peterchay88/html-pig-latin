@@ -2,9 +2,19 @@ body {
     /* background-color: #323236;d */
     background-color: aliceblue;
     display: flex;
-    flex-direction: column; /*Row is the default. Stacks item from left to right*/
+    flex-direction: row; /*Row is the default. Stacks item from left to right*/
     height: 100vh; /* Needed to stretch body full length of the page*/ 
     margin: 0;
+}
+
+#container {
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
+    flex-grow: 1; /* 1/12 the width of main content*/
+    background-color: aliceblue;
+    grid-template-columns: 1fr;
+    /* padding-left: 139px; */
 }
 
 .Main-Content {
@@ -12,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    flex-grow: 15;
+    flex-grow: 1;
     padding-bottom: 200px;
     /* margin-right: 139px; */
 }
@@ -24,37 +34,52 @@ Side Nav and Settings Button Styles
 #side-menu{
     background-color: #323236;
     flex-grow: 1; /* 1/12 the width of main content*/
-    display: none;
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 15%;
+    /* display: none; */
 }
 
-#settings-btn {
+#settings-btn-menu-open {
     background-color: transparent;
     border: none;
-    position: sticky;
+    /* position: fixed; */
+    z-index: 1001;
+    /* position: sticky; */
+}
+
+#settings-menu-collapsed {
+    display: none;
 }
 
 #settings-btn-menu-closed {
     display: flex;
     background-color: transparent;
     align-items: center;
-    font-size: 30px;
     position: fixed;
-    /* left: 0px; */
     z-index: 1000;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: transparent;
     border: none;
+    display: none;
+}
+
+#settings-btn-menu-closed:hover {
+    background-color: #323236;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 50px;
 }
 
 #settings-btn-menu-closed:hover svg{
     fill: rgb(248, 176, 188);
 }
 
-#settings-btn-menu-closed > span {
-    color: aquamarine;
-    /* font-size: 100px; */
+#settings-btn-menu-open:hover svg{
+    fill: rgb(248, 176, 188);
 }
 
 /*****************************************
