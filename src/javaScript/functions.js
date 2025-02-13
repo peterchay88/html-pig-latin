@@ -6,14 +6,22 @@ class ButtonFunctions {
      * Initialize button functions class by defining html elements
      */
     constructor() {
+        // HTML elements found in main content
         this.textBox = document.getElementById("text-box");
         this.translateButton = document.getElementById("translate-button");
         this.copyButton = document.getElementById("copy-button");
         this.clearButton = document.getElementById("clear-button");
 
+        // HTML elements found in settings menu
+        this.settingsButtonClosed = document.getElementById("settings-btn-menu-closed");
+        this.settingsMenu = document.getElementById("settings-menu");
+        this.settingsButtonOpen = document.getElementById("settings-btn-menu-open");
+
         // Attach event listeners within the constructor to ensure this context is correct
         this.translateButton.addEventListener("click", () => this.translateText());
         this.clearButton.addEventListener("click", () => this.clearTextArea());
+        this.settingsButtonClosed.addEventListener("click", () => this.openSettingsMenu());
+        this.settingsButtonOpen.addEventListener("click", () => this.closeSettingsMenu());
     }
 
     /**
@@ -53,6 +61,24 @@ class ButtonFunctions {
      */
     copyText(){
         
+    }
+    
+    /**
+     * Opens the settings menu when the settings button is clicked
+     */
+    openSettingsMenu(){
+        console.log("Settings menu opened");
+        this.settingsMenu.style.visibility = "visible";
+        this.settingsMenu.style.opacity = "1";
+
+    }
+    /**
+     * Closes the settings menu when the close button is clicked
+     */
+    closeSettingsMenu(){
+        console.log("settings menu closed");
+        this.settingsMenu.style.visibility = "hidden";
+        this.settingsMenu.style.opacity = "0";
     }
 
 }

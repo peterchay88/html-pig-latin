@@ -38,15 +38,15 @@ Side Nav and Settings Button Styles
     z-index: 1000;
     height: 100vh;
     width: 15%;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.3s;
 }
 
 #settings-btn-menu-open {
     background-color: transparent;
     border: none;
-    /* position: fixed; */
-    z-index: 1001;
-    /* position: sticky; */
+    z-index: 1000;
 }
 
 #settings-btn-menu-closed {
@@ -61,7 +61,6 @@ Side Nav and Settings Button Styles
     background-color: transparent;
     border: none;
     transition: 0.5s ease;
-    /* display: none; */
 }
 
 #settings-btn-menu-closed:hover {
