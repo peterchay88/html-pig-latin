@@ -38,7 +38,7 @@ Side Nav and Settings Button Styles
     z-index: 1000;
     height: 100vh;
     width: 15%;
-    /* display: none; */
+    display: none;
 }
 
 #settings-btn-menu-open {
@@ -47,10 +47,6 @@ Side Nav and Settings Button Styles
     /* position: fixed; */
     z-index: 1001;
     /* position: sticky; */
-}
-
-#settings-menu-collapsed {
-    display: none;
 }
 
 #settings-btn-menu-closed {
@@ -64,7 +60,7 @@ Side Nav and Settings Button Styles
     padding-right: 10px;
     background-color: transparent;
     border: none;
-    display: none;
+    /* display: none; */
 }
 
 #settings-btn-menu-closed:hover {
