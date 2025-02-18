@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Settings</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,6 +70,19 @@
         fill: rgb(248, 176, 188);
     }
 
+    #apply-changes {
+        background-color: #323236;
+        color: aliceblue;
+        border-radius: 10px;
+    }
+
+    #set-theme {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 50%;
+    }
+
     </style>
 </head>
 <body>
@@ -89,40 +102,23 @@
     
 
     <div class="container">
-        <h1>Pig Latin<span id="period">!</span></h1>
+        <h1>Settings<span id="period">.</span></h1>
         <p>
-            Welcome to the Pig Latin electron app! This project is a simple JavaScript application that translates English sentences into Pig Latin. 
-            Pig Latin is a fun and playful language game where words in English are altered according to a simple set of rules.
+            Here you can change and alter the settings for your application. Adjust the preferences to suit your needs.
         </p>
 
-        <p>
-            This app is intended to be used as an electron desktop application, so most of its styling is geared against that however you may still 
-            use it as a web application by running the following command in the terminal: <br><br>
+        <label for="theme">Change Theme</label>
+        <select name="theme" id="set-theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="high-contrast">high-contrast</option>
+        </select>
 
-            TODO: Create python flask app.
+        <button id="apply-changes">
+            Apply Changes
+        </button>
 
-        </p>
-        <h2>How It Works</h2>
-        <p>The rules for converting words to Pig Latin are as follows:</p>
-        <ul>
-            <li>If a word begins with a consonant or consonant cluster, move it to the end of the word and add "ay". For example, "hello" becomes "ellohay".</li>
-            <li>If a word begins with a vowel, simply add "way" to the end of the word. For example, "apple" becomes "appleway".</li>
-        </ul>
-        <h2>Features</h2>
-        <p>This project includes the following features:</p>
-        <ul>
-            <li>Real-time translation of English sentences to Pig Latin.</li>
-            <li>Simple and intuitive user interface.</li>
-        </ul>
-        <h2>Getting Started</h2>
-        <p>
-            To get started with the Pig Latin Project, simply open the application and start typing your sentences in English, then click the translate button.
-            The translation will be displayed instantly.
-        </p>
-        <p>
-            I hope you enjoy using this app! Feel free to follow me on <a href="https://github.com/peterchay88">Github</a> 
-            and <a href="https://www.linkedin.com/in/peter-chay-2259b411b/">linked-in</a>
-        </p>
+      
     </div>
 </body>
 </html>
