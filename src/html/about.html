@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pig Latin Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .container {
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(220, 154, 154, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+
+        #period {
+            color: rgb(248, 176, 188);
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li::marker {
+            color: rgb(248, 176, 188);
+        }
+
+        a {
+            color: rgb(221, 136, 150);
+            text-decoration: none;
+        }
+
+        #back-btn {
+        display: flex;
+        background-color: transparent;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 5px;
+        background-color: transparent;
+        border: none;
+        transition: 0.5s ease;
+        color: #323236;
+    }
+
+    #back-btn:hover {
+        background-color: #323236;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 50px;
+    }
+
+    #back-btn:hover svg{
+        fill: rgb(248, 176, 188);
+    }
+
+    </style>
+</head>
+<body>
+
+    
+        <a href="index.html" id="back-btn">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50" height="50"
+            fill="currentColor"
+            class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0
+                .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+        </a>
+    
+
+    <div class="container">
+        <h1>Pig Latin<span id="period">!</span></h1>
+        <p>
+            Welcome to the Pig Latin electron app! This project is a simple JavaScript application that translates English sentences into Pig Latin. 
+            Pig Latin is a fun and playful language game where words in English are altered according to a simple set of rules.
+        </p>
+
+        <p>
+            This app is intended to be used as an electron desktop application, so most of its styling is geared against that however you may still 
+            use it as a web application by running the following command in the terminal: <br><br>
+
+            TODO: Create python flask app.
+
+        </p>
+        <h2>How It Works</h2>
+        <p>The rules for converting words to Pig Latin are as follows:</p>
+        <ul>
+            <li>If a word begins with a consonant or consonant cluster, move it to the end of the word and add "ay". For example, "hello" becomes "ellohay".</li>
+            <li>If a word begins with a vowel, simply add "way" to the end of the word. For example, "apple" becomes "appleway".</li>
+        </ul>
+        <h2>Features</h2>
+        <p>This project includes the following features:</p>
+        <ul>
+            <li>Real-time translation of English sentences to Pig Latin.</li>
+            <li>Simple and intuitive user interface.</li>
+        </ul>
+        <h2>Getting Started</h2>
+        <p>
+            To get started with the Pig Latin Project, simply open the application and start typing your sentences in English, then click the translate button.
+            The translation will be displayed instantly.
+        </p>
+        <p>
+            I hope you enjoy using this app! Feel free to follow me on <a href="https://github.com/peterchay88">Github</a> 
+            and <a href="https://www.linkedin.com/in/peter-chay-2259b411b/">linked-in</a>
+        </p>
+    </div>
+</body>
+</html>
