@@ -87,7 +87,7 @@ Settings List Styles
 
 #settings-list {
     font-family: 'Poppins', sans-serif;
-    font-size: 1em;
+    font-size: 25px;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -96,6 +96,7 @@ Settings List Styles
 #settings-list li {
     padding: 10px;
     color: aliceblue;
+
 }
 
 #settings-list li:hover {
