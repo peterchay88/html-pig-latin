@@ -23,7 +23,7 @@ body {
     align-items: center;
     flex-direction: column; 
     flex-grow: 1;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     /* margin-right: 139px; */
 }
 
@@ -87,7 +87,7 @@ Settings List Styles
 
 #settings-list {
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     list-style: none;
     margin: 0;
     padding-left: 0;
