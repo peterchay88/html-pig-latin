@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .container {
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(220, 154, 154, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+
+        #period {
+            color: rgb(248, 176, 188);
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li::marker {
+            color: rgb(248, 176, 188);
+        }
+
+        a {
+            color: rgb(221, 136, 150);
+            text-decoration: none;
+        }
+
+        #back-btn {
+        display: flex;
+        background-color: transparent;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 5px;
+        background-color: transparent;
+        border: none;
+        transition: 0.5s ease;
+        color: #323236;
+    }
+
+    #back-btn:hover {
+        background-color: #323236;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 50px;
+    }
+
+    #back-btn:hover svg{
+        fill: rgb(248, 176, 188);
+    }
+
+    #apply-changes {
+        background-color: #323236;
+        color: aliceblue;
+        border-radius: 10px;
+    }
+
+    #set-theme {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 50%;
+    }
+
+    </style>
+</head>
+<body>
+
+    
+        <a href="index.html" id="back-btn">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50" height="50"
+            fill="currentColor"
+            class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0
+                .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+        </a>
+    
+
+    <div class="container">
+        <h1 id="header">Settings<span id="period">.</span></h1>
+        <p>
+            Here you can change and alter the settings for your application. Adjust the preferences to suit your needs.
+        </p>
+
+        <label for="theme">Change Theme</label>
+        <select name="theme" id="set-theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="high-contrast">high-contrast</option>
+        </select>
+
+        <button id="apply-changes">
+            Apply Changes
+        </button>
+
+      
+    </div>
+
+</body>
+    <script src="../javaScript/settings.js"></script>
+</html>

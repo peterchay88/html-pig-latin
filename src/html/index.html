@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Latin Translator!</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+    <div id="container">
+        <!-- Settings button -->
+         <!-- <div id="settings-menu-collapsed"> -->
+            <button id="settings-btn-menu-closed">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50" height="50"
+                fill="rgb(209, 209, 213)"
+                class="bi bi-gear"
+                viewBox="0 0 16 16">
+                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873
+                    0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873
+                    0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0
+                    0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873
+                    0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873
+                    1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873
+                    1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873
+                    1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873
+                    1.873 0 0 0 2.692-1.115z"/>
+                  </svg>
+            </button>
+         <!-- </div> -->
+        
+        <!-- Add side menu that pops out when you click settings gear -->
+        <div id="settings-menu">
+            <!-- Add footer element to show project info and settings button-->
+            <div id="">
+                <button id="settings-btn-menu-open">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50" height="50"
+                        fill="rgb(209, 209, 213)"
+                        class="bi bi-gear"
+                        viewBox="0 0 16 16">
+                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873
+                        0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873
+                        0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0
+                        0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873
+                        0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873
+                        1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873
+                        1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873
+                        1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873
+                        1.873 0 0 0 2.692-1.115z"/>
+                    </svg>
+                </button>
+            </div>
+            <hr>
+
+            <ul id="settings-list">
+                <li>
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="30" height="30" 
+                    fill="currentColor" class="bi bi-file-earmark-ruled-fill" viewBox="0 0 16 16">
+                        <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 
+                        .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M3 9h10v1H6v2h7v1H6v2H5v-2H3v-1h2v-2H3z"/>
+                      </svg>
+                    <a href="about.html" id="about-link">About</a>
+                </li>
+                <li>
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="30" height="30" 
+                    fill="currentColor" class="bi bi-palette-fill" viewBox="0 0 16 16">
+                        <path d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07M8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                      </svg>
+                    <a href="settings.html">Themes</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Main content of the page. Including header, text box, and buttons -->
+        <div class="Main-Content">
+            <div id="header">
+                <h1>Pig Latin Translator<span id="header-period">.</span></h1>
+            </div>
+        
+            <div id="translate-box-area">
+                <textarea name="" id="text-box" placeholder="Enter your text here and click translate!"></textarea>
+                <div id="button-group">
+                    <button id="copy-button">Copy</button>
+                    <button id="translate-button">Translate</button>
+                    <button id="clear-button">Clear</button>
+                </div>
+            </div>
+            <!-- Toast menu to pop confirmation messages -->
+            <div id="toast-menu"></div>
+        </div>
+    </div>
+
+   
+    
+</body>
+
+    <script src="../javaScript/render.js"></script>
+    <script src="../javaScript/functions.js" type="module"></script>
+    <!-- <script src="../javaScript/pigLatin.js"></script> -->
+
+</html>
