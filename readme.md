@@ -19,7 +19,7 @@ No real installation needed, if you wish to fork this repository and make contri
 
 
 ### Usage
-Navigate to [petersigpayatinlay.com](petersigpayatinlay.com) and enter the text you wish to translate in the text box and hit translate!
+Navigate to [petersigpayatinlay.com](http://petersigpayatinlay.com) and enter the text you wish to translate in the text box and hit translate!
 
 
 ### Contributing
