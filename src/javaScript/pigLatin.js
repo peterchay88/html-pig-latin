@@ -76,6 +76,14 @@ export default class PigLatin {
      * @returns {string} Translated word.
      */
     doubleConsonant(word){
+        var result = this.checkForPunctuation(word);
+
+        if (Array.isArray(result)) {
+            var [resultWord, resultPunctuation] = result;
+            let secondHalf = resultWord.slice(2);
+            let firstHalf = resultWord.slice(0, 2);
+            return secondHalf + firstHalf + this.suffix + resultPunctuation;
+        }
         let secondHalf = word.slice(2);
         let firstHalf = word.slice(0, 2);
         return secondHalf + firstHalf + this.suffix;
@@ -88,6 +96,14 @@ export default class PigLatin {
      * @returns {string} Translated word.
      */
     singleConsonant(word){
+        var result = this.checkForPunctuation(word);
+
+        if (Array.isArray(result)) {
+            var [resultWord, resultPunctuation] = result;
+            let secondHalf = resultWord.slice(1);
+            let firstHalf = resultWord.slice(0, 1);
+            return secondHalf + firstHalf + this.suffix + resultPunctuation;
+        }
         let secondHalf = word.slice(1);
         let firstHalf = word.slice(0, 1);
         return secondHalf + firstHalf + this.suffix;
@@ -100,7 +116,29 @@ export default class PigLatin {
      * @returns {string} Translated word.
      */
     firstVowel(word){
-        return word + this.suffix;
+        var result = this.checkForPunctuation(word);
+
+        if (Array.isArray(result)) {
+            var [resultWord, resultPunctuation] = result;
+            return resultWord + this.suffix + resultPunctuation;
+        } else {
+            return result + this.suffix;
+        }
+    }
+
+    /**
+     * This method checks to see if the word being translated ends in a punctuation mark
+     * @param {string} word - Word to be checked
+     */
+    checkForPunctuation(word){
+        const punctuation = [".", ",", "!", "?", ";", ":"];
+        if (punctuation.includes(word[word.length - 1])) {
+            var slicedWord = word.slice(0, word.length - 1);
+            var punctuationMark = word.slice(word.length - 1);
+            return [slicedWord, punctuationMark];
+        } else {
+            return word;
+        }
     }
 
     /**
