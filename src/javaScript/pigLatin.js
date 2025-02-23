@@ -50,11 +50,9 @@ export default class PigLatin {
      * @param {string} word - Word to be translated. 
      */
     figureOutTranslation(word) {
-        if (this.vowels.includes(word[0]) === true) { // If the first letter is a vowel
+        if (this.vowels.includes(word[0].toLowerCase()) === true) { // If the first letter is a vowel
             var translatedWord = this.firstVowel(word);
-        } 
-
-        if (this.vowels.includes(word[0]) === false) { // if the first letter is not a vowel
+        } else if (this.vowels.includes(word[0]) === false) { // if the first letter is not a vowel
             if (this.vowels.includes(word[1]) === true) { // if the second letter is a vowel
                 var translatedWord = this.singleConsonant(word);
             } else { // if the second letter is not a vowel
