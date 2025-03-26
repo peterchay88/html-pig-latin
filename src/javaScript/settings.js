@@ -70,7 +70,7 @@ class Settings {
         this.themeDropdown.style.color = "yellow";
 
         // Event listen for hover over back button
-        this.addHoverEvents();
+        this.addHoverEventsHighContrast();
        
     }
 
@@ -95,18 +95,22 @@ class Settings {
     /**
      * Add hover events for high contrast theme
      */
-    addHoverEvents(){
-        this.backButton.addEventListener("mouseover", () => this.highContrastHover());
-        this.backButton.addEventListener("mouseout", () => this.highContrastOut());
+    addHoverEventsHighContrast(){
+        this.backButton.addEventListener("mouseover", function() { 
+            this.backButton.style.backgroundColor = "yellow";
+            this.backButton.style.color = "black";        
+        });
+        this.backButton.addEventListener("mouseout", this.highContrastOut);
+        console.log("High contrast hover events added.")
     }
 
     /**
      * Remove hover events for high contrast theme
      */
-    removeHoverEvents(){
+    removeHoverEventsHighContrast(){
         this.backButton.removeEventListener("mouseover", this.highContrastHover);
         this.backButton.removeEventListener("mouseout", this.highContrastOut);
-        console.log("Hover events removed")
+        console.log("High contrast hover events removed")
     }
     
 
@@ -125,7 +129,7 @@ class Settings {
         }
 
         // Remove hover events
-        this.removeHoverEvents();
+        this.removeHoverEventsHighContrast();
 
     }
 }
