@@ -21,7 +21,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
           
-      - name: Sync files to S3
+      - name: Sync files to S3 #  aws s3 sync . s3://petersigpayatinlay.com --delete --exclude ".git/*" --exclude ".github/*"
         run: |
-          aws s3 sync . s3://petersigpayatinlay.com --delete --exclude ".git/*" --exclude ".github/*"
           aws s3 sync . s3://oink.peterchay.com --delete --exclude ".git/*" --exclude ".github/*"
