@@ -24,3 +24,4 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync . s3://petersigpayatinlay.com --delete --exclude ".git/*" --exclude ".github/*"
+          aws s3 sync . s3://oink.peterchay.com --delete --exclude ".git/*" --exclude ".github/*"
